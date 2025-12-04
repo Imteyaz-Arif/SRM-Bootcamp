@@ -1,0 +1,17 @@
+import java.util.*;
+class Main {
+    public static int countBinStr(int n){
+        //Base Condition
+        if(n==0) return 0;
+        if(n==1) return 2;
+        if(n==2) return 3;
+        //Logic
+        return countBinStr(n-1)+countBinStr(n-2);
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter numuber : ");
+        int n=sc.nextInt();
+        System.out.println("Number of binary string of length " + n + " with no consecutive 1's : " + countBinStr(n));
+    }
+}
