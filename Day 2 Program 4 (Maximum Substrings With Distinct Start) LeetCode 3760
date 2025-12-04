@@ -1,0 +1,9 @@
+class Solution {
+    public int maxDistinct(String s) {
+        Set<Character> uc=new HashSet<>();
+        for(char c:s.toCharArray()){
+            uc.add(c);
+        }
+        return uc.size();
+    }
+}
